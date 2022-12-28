@@ -1,3 +1,20 @@
 type Query {
-  greeting: String
+  consultants: [Consultant!]!
+  consultant(id: ID!): Consultant!
+  projects: [Project!]!
+  project(id: ID!): Project!
+}
+
+type Consultant {
+  id: ID!
+  name: String!
+  age: Int!
+  projects: [Project]
+}
+
+type Project {
+  id: ID!
+  company: String!
+  description: String!
+  year: Int!
 }
