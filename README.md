@@ -4,6 +4,8 @@
 
 Currently, the [fakebase](https://www.npmjs.com/package/fakebase) database contains simply two tables in the /data folder, a list of consultants and a list of projects, where each consultant is asigned to one or more projects.
 
+The important logic is contained in the /schema folder. typeDefs describe how e.g. a "consultant" or "project" object looks like, which fields it contains etc. Resolvers access the server data, perform filtering etc, to create the data that is returned to a query.
+
 ## Usage
 
 `npm install` to install dependencies.
